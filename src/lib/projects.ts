@@ -29,6 +29,7 @@ export const projects: Project[] = [
     role: "Full stack development",
     tech: ["React", "Vite", "Tailwind CSS", "TypeScript", "OpenWeather API"],
     category: "web",
+    highlight: true,
     link: "https://abhichhetri09.github.io/weather-app/",
     github: "https://github.com/abhichhetri09/weather-app",
   },
