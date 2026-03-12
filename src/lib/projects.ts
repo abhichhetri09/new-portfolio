@@ -23,6 +23,16 @@ export const projects: Project[] = [
     github: "https://github.com/abhichhetri09/portfolio",
   },
   {
+    slug: "weather-app",
+    title: "Weather App",
+    description: "A weather app to see the current weather of a city.",
+    role: "Full stack development",
+    tech: ["React", "Vite", "Tailwind CSS", "TypeScript", "OpenWeather API"],
+    category: "web",
+    link: "https://abhichhetri09.github.io/weather-app/",
+    github: "https://github.com/abhichhetri09/weather-app",
+  },
+  {
     slug: "movie-web-app",
     title: "Movie Web Application",
     description:
