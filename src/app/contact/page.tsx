@@ -51,7 +51,7 @@ export default function ContactPage() {
             from_name: form.name,
             to_name: "Abhishek",
             from_email: form.email,
-            to_email: "abhichhetri09@gmail.com",
+            to_email: "abhichhetri09@outlook.com",
             message: form.message,
           },
           EMAILJS_PUBLIC_KEY,

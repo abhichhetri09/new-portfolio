@@ -1,5 +1,6 @@
+import Image from "next/image";
 import { Section } from "@/components/Section";
-
+import { profile } from "@/assets";
 export default function AboutPage() {
   return (
     <>
@@ -7,31 +8,50 @@ export default function AboutPage() {
         id="about"
         eyebrow="About"
         title="Full Stack Developer | Hoviber."
-        subtitle="Full Stack Software Engineer with hands-on experience building scalable web and mobile applications."
       >
         <div className="grid gap-10 md:grid-cols-[minmax(0,2fr)_minmax(0,1.4fr)] md:items-start">
-          <div className="space-y-4 text-sm text-slate-200/85 sm:text-base">
-            <p>
-              I&apos;m a full stack software engineer with hands‑on experience
-              building scalable web and mobile applications. I enjoy developing
-              modern user interfaces, designing REST APIs, and integrating
-              backend services with cross‑platform mobile applications.
+          <div className="space-y-5 text-sm text-slate-200/85 sm:text-base">
+            <p className="text-sm text-slate-300 sm:text-base">
+              Full Stack Software Engineer with hands-on experience building
+              scalable web and mobile applications.
             </p>
-            <p>
-              Currently at Hoviber, I contribute to both frontend and backend
-              development while delivering production‑ready features for mobile
-              platforms. I work daily with React, React Native (Expo),
-              TypeScript, Node.js, PostgreSQL, and modern tooling in Agile
-              teams.
-            </p>
-            <p>
-              Previously, I was a Frontend Developer at Vesko, where I built and
-              maintained the business website and later joined the mobile team,
-              and a Production Specialist at Swappie, operating in a fast‑paced
-              environment with a strong focus on quality and efficiency.
-            </p>
+            <div className="space-y-4">
+              <p>
+                I&apos;m a full stack software engineer with hands‑on experience
+                building scalable web and mobile applications. I enjoy
+                developing modern user interfaces, designing REST APIs, and
+                integrating backend services with cross‑platform mobile
+                applications.
+              </p>
+              <p>
+                Currently at Hoviber, I contribute to both frontend and backend
+                development while delivering production‑ready features for
+                mobile platforms. I work daily with React, React Native (Expo),
+                TypeScript, Node.js, PostgreSQL, and modern tooling in Agile
+                teams.
+              </p>
+              <p>
+                Previously, I was a Frontend Developer at Vesko, where I built
+                and maintained the business website and later joined the mobile
+                team, and a Production Specialist at Swappie, operating in a
+                fast‑paced environment with a strong focus on quality and
+                efficiency.
+              </p>
+            </div>
           </div>
           <div className="space-y-4 rounded-2xl border border-slate-700/70 bg-slate-900/70 p-5 text-sm shadow-[0_18px_45px_rgba(15,23,42,0.9)]">
+            <div className="flex justify-center md:justify-start">
+              <div className="overflow-hidden rounded-2xl border border-slate-700/70 bg-slate-900/80 p-1.5 shadow-[0_18px_45px_rgba(15,23,42,0.9)]">
+                <Image
+                  src={profile}
+                  alt="Abhishek Khati Chhetri"
+                  width={180}
+                  height={220}
+                  className="h-48 w-40 rounded-[1rem] object-cover sm:h-56 sm:w-44"
+                  priority
+                />
+              </div>
+            </div>
             <h3 className="text-sm font-semibold text-slate-100">
               Quick snapshot
             </h3>

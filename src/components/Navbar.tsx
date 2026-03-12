@@ -3,7 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import Image from "next/image";
 import { siteConfig } from "@/lib/content";
+import { profile } from "@/assets";
 
 const links = [
   { href: "/", label: "Home" },
@@ -19,8 +21,15 @@ export function Navbar() {
   return (
     <header className="mb-6 flex items-center justify-between border-b border-white/5 pb-3 pt-2 sm:mb-10 sm:pb-4">
       <Link href="/" className="group flex items-center gap-2">
-        <div className="relative h-8 w-8 overflow-hidden rounded-lg border border-cyan-400/40 bg-gradient-to-br from-cyan-500/40 via-fuchsia-500/30 to-slate-900 shadow-[0_0_30px_rgba(34,211,238,0.35)]">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(248,250,252,0.8),transparent_55%)]" />
+        <div className="relative h-9 w-9 overflow-hidden rounded-2xl border border-cyan-400/50 bg-slate-900 shadow-[0_0_30px_rgba(34,211,238,0.45)]">
+          <Image
+            src={profile}
+            alt={siteConfig.name}
+            fill
+            sizes="36px"
+            className="object-cover"
+            priority
+          />
         </div>
         <div className="flex flex-col leading-tight">
           <span className="text-sm font-semibold tracking-tight">

@@ -20,7 +20,7 @@ export function Section({
   return (
     <section
       id={id}
-      className={`relative py-12 sm:py-16 lg:py-20 ${className ?? ""}`}
+      className={`relative py-2 sm:py-16 lg:py-2 ${className ?? ""}`}
     >
       <div className="pointer-events-none absolute inset-x-0 top-0 mx-auto h-px max-w-3xl bg-gradient-to-r from-transparent via-slate-600/60 to-transparent" />
       <div className="relative">
@@ -44,4 +44,3 @@ export function Section({
     </section>
   );
 }
-

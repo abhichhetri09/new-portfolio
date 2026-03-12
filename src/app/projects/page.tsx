@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { Section } from "@/components/Section";
 import { projects } from "@/lib/projects";
 
@@ -9,8 +12,11 @@ const filters = [
 ];
 
 export default function ProjectsPage() {
-  // Simple filter based on search params could be added later; for now show all.
-  const visibleProjects = projects;
+  const [activeFilter, setActiveFilter] = useState<string>("all");
+
+  const visibleProjects = projects.filter((project) =>
+    activeFilter === "all" ? true : project.category === activeFilter,
+  );
 
   return (
     <Section
@@ -24,10 +30,11 @@ export default function ProjectsPage() {
           <button
             key={filter.id}
             type="button"
-            className={`cursor-default rounded-full border px-3 py-1 ${
-              filter.id === "all"
-                ? "border-cyan-400/80 bg-cyan-500/10 text-cyan-200"
-                : "border-slate-600/70 bg-slate-900/80 text-slate-300"
+            onClick={() => setActiveFilter(filter.id)}
+            className={`rounded-full border px-3 py-1 transition ${
+              activeFilter === filter.id
+                ? "border-cyan-400/80 bg-cyan-500/10 text-cyan-200 shadow-[0_0_25px_rgba(34,211,238,0.65)]"
+                : "cursor-pointer border-slate-600/70 bg-slate-900/80 text-slate-300 hover:border-cyan-400/60 hover:text-cyan-200"
             }`}
           >
             {filter.label}
@@ -96,4 +103,3 @@ export default function ProjectsPage() {
     </Section>
   );
 }
-

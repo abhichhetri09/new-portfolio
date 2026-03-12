@@ -1,9 +1,7 @@
 export const siteConfig = {
   name: "Abhishek Khati Chhetri",
   role: "Full Stack Developer",
-  email: "abhichhetri09@gmail.com",
+  email: "abhichhetri09@outlook.com",
   github: "https://github.com/abhichhetri09",
-  linkedin:
-    "https://www.linkedin.com/in/abhishek-khati-chhetri-a5b380174/",
+  linkedin: "https://www.linkedin.com/in/abhishek-khati-chhetri-a5b380174/",
 } as const;
-
