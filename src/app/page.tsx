@@ -1,65 +1,118 @@
-import Image from "next/image";
+import Link from "next/link";
+import { Section } from "@/components/Section";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <Section
+        id="hero"
+        eyebrow="Portfolio 2026"
+        title="Building reliable web & mobile experiences with modern JavaScript."
+        subtitle="Hi, I&apos;m Abhishek Khati Chhetri — a full‑stack software engineer based in Helsinki, focused on building reliable web and mobile products."
+      >
+        <div className="glass-panel relative flex flex-col gap-8 px-6 py-8 sm:px-10 sm:py-10 lg:flex-row lg:items-center">
+          <div className="relative z-10 flex-1 space-y-6">
+            <p className="inline-flex items-center gap-2 rounded-full border border-emerald-400/40 bg-emerald-500/10 px-3 py-1 text-[11px] font-medium tracking-[0.18em] uppercase text-emerald-300 shadow-[0_0_30px_rgba(52,211,153,0.45)]">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
+              Available for new opportunities
+            </p>
+            <h1 className="text-balance text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
+              Building interfaces that feel{" "}
+              <span className="bg-gradient-to-r from-cyan-300 via-sky-400 to-fuchsia-400 bg-clip-text text-transparent">
+                futuristic
+              </span>{" "}
+              yet familiar.
+            </h1>
+            <p className="max-w-xl text-sm text-slate-200/80 sm:text-base">
+              I turn product ideas into shipped features using React, React
+              Native, TypeScript, Node.js, PostgreSQL, and modern tooling. With
+              over three years of hands‑on experience, I&apos;ve contributed to
+              production systems for companies like Hoviber and Vesko.
+            </p>
+            <div className="flex flex-wrap items-center gap-3">
+              <Link
+                href="/projects"
+                className="inline-flex items-center justify-center rounded-full bg-cyan-500 px-5 py-2.5 text-sm font-medium text-slate-950 shadow-[0_12px_45px_rgba(6,182,212,0.7)] transition hover:bg-cyan-400"
+              >
+                View projects
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-full border border-slate-500/70 bg-slate-900/60 px-4 py-2.5 text-sm font-medium text-slate-100 transition hover:border-cyan-400/70 hover:text-cyan-200"
+              >
+                Let&apos;s collaborate
+              </Link>
+            </div>
+          </div>
+          <div className="relative mt-8 flex-1 lg:mt-0 lg:pl-6">
+            <div className="pointer-events-none absolute -top-10 -right-10 h-32 w-32 rounded-full bg-cyan-400/40 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-12 -left-6 h-32 w-32 rounded-full bg-fuchsia-500/40 blur-3xl" />
+            <div className="relative mx-auto flex w-full max-w-xs flex-col gap-3 rounded-2xl border border-slate-600/80 bg-slate-900/60 p-4 text-xs text-slate-200 shadow-[0_18px_50px_rgba(15,23,42,0.95)] backdrop-blur">
+              <div className="flex items-center justify-between">
+                <span className="text-[11px] font-medium text-slate-400">
+                  Tech stack
+                </span>
+                <span className="rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-emerald-300">
+                  Full‑stack
+                </span>
+              </div>
+              <div className="grid grid-cols-2 gap-2 text-[11px]">
+                <ul className="space-y-1 text-slate-300">
+                  <li>• TypeScript / JavaScript</li>
+                  <li>• React / Next.js</li>
+                  <li>• Tailwind CSS</li>
+                </ul>
+                <ul className="space-y-1 text-slate-300">
+                  <li>• Node.js / APIs</li>
+                  <li>• Databases</li>
+                  <li>• CI/CD & tooling</li>
+                </ul>
+              </div>
+              <div className="mt-1 h-px bg-gradient-to-r from-transparent via-slate-600/70 to-transparent" />
+              <p className="text-[11px] text-slate-400">
+                Focused on clean architecture, performance, and DX.
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </Section>
+
+      <Section
+        id="highlights"
+        eyebrow="Highlights"
+        title="A quick glimpse into my work."
+        subtitle="Selected projects, technologies, and problem spaces I enjoy working in."
+        className="pt-4"
+      >
+        <div className="grid gap-4 md:grid-cols-3">
+          <div className="rounded-2xl border border-slate-700/70 bg-slate-900/70 p-4 text-sm shadow-[0_14px_45px_rgba(15,23,42,0.9)]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-cyan-300">
+              Interfaces
+            </p>
+            <p className="mt-2 text-slate-100">
+              Modern, responsive UIs with attention to motion and micro‑details.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-slate-700/70 bg-slate-900/70 p-4 text-sm shadow-[0_14px_45px_rgba(15,23,42,0.9)]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-fuchsia-300">
+              Systems
+            </p>
+            <p className="mt-2 text-slate-100">
+              Robust backends, APIs, and data flows that scale with your
+              product.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-slate-700/70 bg-slate-900/70 p-4 text-sm shadow-[0_14px_45px_rgba(15,23,42,0.9)]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-emerald-300">
+              Collaboration
+            </p>
+            <p className="mt-2 text-slate-100">
+              Working closely with designers, devs, and stakeholders to ship
+              great experiences.
+            </p>
+          </div>
         </div>
-      </main>
-    </div>
+      </Section>
+    </>
   );
 }
